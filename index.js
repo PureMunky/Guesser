@@ -27,7 +27,9 @@ var guesser = (function () {
       message = "Failure!";
     }
 
-    output.innerText = message + " " + current;
+    message += '\nYou guessed ' + num + '.\nI was thinking of ' + current + '.';
+
+    output.innerText = message;
 
     history.correct += (result ? 1 : 0);
     history.events.push({
